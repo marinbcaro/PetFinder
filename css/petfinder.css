@@ -1,0 +1,19 @@
+body {
+    padding-top: 70px; 
+}
+.thumb {
+    margin-bottom: 30px;
+}
+.thumb h3{
+	text-align: center;
+}
+
+footer {
+    margin: 50px 0;
+}
+.thumbnail>img{
+    max-height: 189px;
+}
+.pager {
+text-align: left;
+}

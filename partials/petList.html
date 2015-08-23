@@ -1,0 +1,26 @@
+<div class="container">
+   <div class="row">
+      <div class="col-lg-12">
+         <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+               <input type="text" class="form-control" placeholder="Search" ng-model="query" >
+            </div>
+            <label>Sort By Title:</label>
+            <label class="formgroup">
+            <input type="radio" ng-model="direction" name="direction" >
+            Asc
+            </label>
+            <label class="formgroup">
+            <input type="radio" ng-model="direction" name="direction" value="reverse" checked>
+            Desc
+            </label>
+         </form>
+      </div>
+      <div class="col-sm-6 col-md-4 thumb" ng-repeat="item in photos | filter: query | orderBy: petOrder:direction">
+         <h3 style="text-align: center;">{{item.title}}</h3>
+         <a href="#/details/{{photos.indexOf(item)}}" class="thumbnail">
+         <img ng-src='https://farm{{item.farm}}.staticflickr.com/{{item.server}}/{{item.id}}_{{item.secret}}.jpg' class="img-responsive" >
+         </a>
+      </div>
+   </div>
+</div>

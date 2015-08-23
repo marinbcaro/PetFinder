@@ -1,0 +1,22 @@
+<div class="container">
+   <div class="row">
+      <div class="col-lg-12">
+         <nav>
+            <ul class="pager">
+               <li><a href="#/details/{{prevItem}}">Previous</a></li>
+               <li><a href="#/details/{{nextItem}}">Next</a></li>
+            </ul>
+         </nav>
+      </div>
+         <div ng-model="photos">
+            <div class="col-sm-6 col-md-4 thumb">
+               <h3>{{photos[whichItem].title}}</h3>
+               <img my-src='https://farm{{photos[whichItem].farm}}.staticflickr.com/{{photos[whichItem].server}}/{{photos[whichItem].id}}_{{photos[whichItem].secret}}.jpg'  class="img-responsive" >
+               <div class="bio">{{photos[whichItem].bio}}</div>
+            </div>
+         </div>
+   </div>
+   <ul class="pager">
+      <li class="previous"><a href="index.html"><span aria-hidden="true">&larr;</span> Back to search</a></li>
+   </ul>
+</div>
